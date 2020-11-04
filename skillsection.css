@@ -1,25 +1,18 @@
 .skill {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
-.skill-topic{
-    font-size: 65px;
-    padding: 16px 16px;
-    text-transform: uppercase;
-    color: gray;
-    left: 50%;
+.skill-info {
+  font-size: 26px;
+  color: rgb(175, 174, 174);
+  display: flex;
+  justify-content: center;
 }
-.skill-info{
-    font-size:26px;
-    color: rgb(175, 174, 174);
-    display: flex;
-    justify-content: center;
-}
-.skill-names{
-    color: rgb(175, 174, 174);
-    text-transform: uppercase;
-    line-height: 2.5em;
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
+.skill-names {
+  color: rgb(175, 174, 174);
+  text-transform: uppercase;
+  line-height: 2.5em;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
 }

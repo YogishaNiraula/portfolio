@@ -6,11 +6,14 @@ Vue.component('nav-bar', {
                 <ul class="nav-bar">
                     <slot></slot>
                 </ul>
-                <nav-burger><nav-menu></nav-menu></nav-burger>
+                <nav-burger :class="{'is-active':showNav}" @click="showNav=!showNav"><nav-menu :class="{'is-active': showNav}"></nav-menu></nav-burger>
             </nav>         
         </div>
         
-    `
+    `,
+    data: function () {
+        return { showNav: false }
+    }
 });
 Vue.component('nav-burger', {
     template: `
@@ -46,6 +49,17 @@ Vue.component('project', {
          </div> 
     `
 });
+Vue.component('contact', {
+    template: `
+        <div>
+            <ul class="social has-text-centered">
+                <li>
+                    <slot></slot>
+                </li>
+            </ul>
+        </div>
+    `
+})
 
 const port = new Vue({
     el: '#app',

@@ -1,31 +1,10 @@
-.contact {
-  height: 100vh;
-}
 .contact h1 {
   font-size: 45px;
   color: gray;
   text-align: center;
   padding: 50px;
 }
-.social {
-  display: flex;
-  justify-content: space-evenly;
-  transform: translateY(150px);
-}
 .social a {
   text-decoration: none;
-}
-.social p {
-  text-transform: uppercase;
-  font-size: 25px;
-  color: grey;
-  text-align: center;
-}
-.social a :hover {
-  text-decoration-line: underline;
-  text-decoration-color: rgb(0, 0, 0);
-}
-.social i {
-  font-size: 125px;
-  color: rgb(134, 134, 248);
+  font-size: 45px;
 }

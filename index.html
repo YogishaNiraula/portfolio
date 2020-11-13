@@ -20,14 +20,32 @@
 
 <body>
     <div id="app">
-        <nav>
-            <div class="name"><a href="/">Yogisha</a></div>
-            <ul class="nav-bar">
-                <li><a href="/">home</a></li>
-                <li><a href="#about">about me</a></li>
-                <li><a href="#skill">skills</a></li>
-                <li><a href="#work">my works</a></li>
-            </ul>
+        <nav class="navbar is-dark " role="navigation">
+            <div class="name navbar-brand">
+                <a class="navbar-item" href="./index.html">Yogisha</a>
+            </div>
+            <div role="button" class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }"
+                aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
+            <div class="navbar-menu" :class="{ 'is-active': showNav }">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="./index.html">
+                        home
+                    </a>
+                    <a class="navbar-item" href="#about">
+                        About me
+                    </a>
+                    <a class="navbar-item" href="#skill">
+                        skills
+                    </a>
+                    <a class="navbar-item" href="#work">
+                        my works
+                    </a>
+                </div>
+            </div>
         </nav>
         <div class="container">
             <div class="container p-10">
@@ -49,23 +67,17 @@
                     <topic>About</topic>
                     <div class="container about-cont">
                         <div class="text-2xl p-12 shadow-inner">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus illum
-                            distinctio
-                            pariatur vitae iure, nemo excepturi, non culpa error enim. Optio temporibus nemo
-                            necessitatibus
-                            a
-                            esse!
-                            Blanditiis optio illum doloremque dolores rem perspiciatis neque pariatur nihil ad ipsam
-                            unde
-                            sunt
-                            incidunt facere amet quibusdam, possimus nam! Odio, consequuntur nihil!
+                            Self-taught, highly motivated developer looking to build a career in web development. A
+                            knack for teamwork and working with people across agency capabilities. Profound
+                            respect for and admiration of the culture, process and craft of web development.
+                            Understanding of what it takes to form long-term client relationships.
                         </div>
                     </div>
                 </section>
             </div>
             <div class="skill" id="skill">
                 <topic>Skill</topic>
-                <span class="skill-info">blah blah blah blah blah blah blah blah.</span>
+                <span class="skill-info">Adept in handling following tools and languages.</span>
                 <div class="skill-names">
                     <span class="text-wrapper">
                         <ul>
@@ -73,6 +85,7 @@
                             <li><span class="letters">css</span></li>
                             <li><span class="letters">javascript</span></li>
                             <li><span class="letters">python</span></li>
+                            <li><span class="letters">Vue</span></li>
                         </ul>
 
                     </span>

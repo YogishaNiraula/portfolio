@@ -1,34 +1,3 @@
-Vue.component('nav-bar', {
-    template: `
-        <div>
-            <nav>
-                <div class="name"><a href="/">Yogisha</a></div>
-                <ul class="nav-bar">
-                    <slot></slot>
-                </ul>
-                <nav-burger :class="{'is-active':showNav}" @click="showNav=!showNav"><nav-menu :class="{'is-active': showNav}"></nav-menu></nav-burger>
-            </nav>         
-        </div>
-        
-    `,
-    data: function () {
-        return { showNav: false }
-    }
-});
-Vue.component('nav-burger', {
-    template: `
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    `
-});
-Vue.component('nav-menu', {
-    template: `
-        <div class=navbar-menu><slot class="navbar-item"></slot></div>
-    `
-});
 Vue.component('topic', {
     template: `
         
@@ -63,4 +32,7 @@ Vue.component('contact', {
 
 const port = new Vue({
     el: '#app',
+    data: {
+        showNav: false
+    }
 });

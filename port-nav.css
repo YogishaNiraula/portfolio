@@ -9,40 +9,18 @@ body {
   overflow-y: hidden;
 }
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: rgb(32, 32, 32);
   letter-spacing: 1px;
 }
-nav a {
+.name > a {
   text-decoration: none;
   color: rgb(194, 191, 191);
 }
 .name {
   font-size: 25px;
 }
-ul {
-  list-style: none;
-}
-.nav-bar {
-  display: flex;
-  justify-content: space-around;
-  width: 35%;
+.navbar-menu {
   text-transform: uppercase;
-}
-@media screen and (max-width: 768px) {
-  .nav-bar {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .nav-bar {
-    width: 50%;
-  }
-  .name {
-    transform: none;
-  }
 }
 /*section1 css starts*/
 .front {

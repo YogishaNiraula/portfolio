@@ -1,12 +1,12 @@
-Vue.component('topic', {
-    template: `
+Vue.component("topic", {
+  template: `
         
         <div class="topics"><slot></slot></div>
 
-    `
-});//need to work on the project component to make it in a grid
-Vue.component('project', {
-    template: `
+    `,
+}); //need to work on the project component to make it in a grid
+Vue.component("project", {
+  template: `
         <div class="column is-one-third p-16">
             <div class="max-w-sm rounded overflow-hidden shadow-lg">
                 <slot><slot name="pic"></slot>
@@ -16,10 +16,10 @@ Vue.component('project', {
                     </div></slot>
             </div>
          </div> 
-    `
+    `,
 });
-Vue.component('contact', {
-    template: `
+Vue.component("contact", {
+  template: `
         <div>
             <ul class="social has-text-centered">
                 <li>
@@ -27,12 +27,12 @@ Vue.component('contact', {
                 </li>
             </ul>
         </div>
-    `
-})
+    `,
+});
 
 const port = new Vue({
-    el: '#app',
-    data: {
-        showNav: false
-    }
+  el: "#app",
+  data: {
+    showNav: false,
+  },
 });

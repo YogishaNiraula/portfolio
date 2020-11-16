@@ -1,145 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yogisha's portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css">
-    <link rel="stylesheet" href="port-nav.css">
-    <link rel="stylesheet" href="aboutsection.css">
-    <link rel="stylesheet" href="skillsection.css">
-    <link rel="stylesheet" href="worksection.css">
-    <link rel="stylesheet" href="contactsection.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="port-nav.css" />
+    <link rel="stylesheet" href="aboutsection.css" />
+    <link rel="stylesheet" href="skillsection.css" />
+    <link rel="stylesheet" href="worksection.css" />
+    <link rel="stylesheet" href="contactsection.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <nav class="navbar is-dark " role="navigation">
-            <div class="name navbar-brand">
-                <a class="navbar-item" href="./index.html">Yogisha</a>
-            </div>
-            <div role="button" class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }"
-                aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
-            <div class="navbar-menu" :class="{ 'is-active': showNav }">
-                <div class="navbar-end">
-                    <a class="navbar-item" href="./index.html">
-                        home
-                    </a>
-                    <a class="navbar-item" href="#about">
-                        About me
-                    </a>
-                    <a class="navbar-item" href="#skill">
-                        skills
-                    </a>
-                    <a class="navbar-item" href="#work">
-                        my works
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="container p-10">
-                <div class="front">
-                    <div class="text1">
-                        <span class="hello-part">Hello,
-                            <br>
-                            I am <span class="yogisha">Yogisha</span>.</span>
-                        <br>
-                        <span class="web-part">Web developer-ish.</span>
-                        <br>
-                        <a class="border-box border-red-500 border-4 p-2 hover:bg-red-400" href="#contact"><span>Contact
-                                me</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" about" id="about">
-                <section>
-                    <topic>About</topic>
-                    <div class="container about-cont">
-                        <div class="text-2xl p-12 shadow-inner">
-                            Self-taught, highly motivated developer looking to build a career in web development. A
-                            knack for teamwork and working with people across agency capabilities. Profound
-                            respect for and admiration of the culture, process and craft of web development.
-                            Understanding of what it takes to form long-term client relationships.
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="skill" id="skill">
-                <topic>Skill</topic>
-                <span class="skill-info">Adept in handling following tools and languages.</span>
-                <div class="skill-names">
-                    <span class="text-wrapper column">
-                        <ul class="columns is-multiline p-6">
-                            <li class="letters column is-half">html</li>
-                            <li class="letters column is-half">css</li>
-                            <li class="letters column is-half">python</li>
-                            <li class="letters column is-half">Vue</li>
-                            <li class="letters column is-half">javascript</li>
-                            <li class="letters column is-half">Git</li>
-                        </ul>
+      <nav class="navbar is-dark" role="navigation">
+        <div class="flex">
+          <div class="name navbar-brand">
+            <a class="navbar-item" href="./index.html">Yogisha</a>
+          </div>
+          <div
+            role="button"
+            class="navbar-burger"
+            @click="showNav = !showNav"
+            :class="{ 'is-active': showNav }"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </div>
+        </div>
 
-                    </span>
-                </div>
-            </div>
+        <div class="navbar-menu" :class="{ 'is-active': showNav }">
+          <div class="navbar-end">
+            <a class="navbar-item" href="./index.html"> home </a>
+            <a class="navbar-item" href="#about"> About me </a>
+            <a class="navbar-item" href="#skill"> skills </a>
+            <a class="navbar-item" href="#work"> my works </a>
+          </div>
         </div>
-        <div class="work" id="work">
-            <topic>Work</topic>
-            <div class="columns is-multiline">
-                <project>
-                    <a href="https://parallax-eight.vercel.app/" target="_blank">
-                        <img slot="pic" class="w-full" src="https://i.imgur.com/6tSk3Kp.png" alt="">
-                        <p slot="project-name" class="text-xl h-10 hover:text-red-500 text-orange-200 text-center">
-                            Parallax</p>
-                    </a>
-                </project>
-                <project>
-                    <a class="project-files" href="https://woodland-landing.vercel.app/" target="_blank">
-                        <img slot="pic" class="w-full" src="https://i.imgur.com/IsmnnCF.jpg" alt="">
-                        <p slot="project-name" class="text-xl h-10 hover:text-red-500 text-orange-200 text-center">
-                            Landing page
-                        </p>
-                    </a>
-                </project>
-                <project>
-                    <a class="project-files" href="https://product-survey.vercel.app/" target="_blank">
-                        <img slot="pic" class="w-full" src="https://i.imgur.com/OA7xQUe.png" alt="">
-                        <p slot="project-name" class="text-xl h-10 hover:text-red-500 text-orange-200 text-center">
-                            Survey</p>
-                    </a>
-                </project>
+      </nav>
+
+      <div class="container">
+        <div class="container p-10">
+          <div class="front">
+            <div class="text1">
+              <span class="hello-part"
+                >Hello,
+                <br />
+                I am <span class="yogisha">Yogisha</span>.</span
+              >
+              <br />
+              <span class="web-part">Web developer-ish.</span>
+              <br />
+              <a
+                class="border-box border-red-500 border-4 p-2 hover:bg-red-400"
+                href="#contact"
+                ><span>Contact me</span></a
+              >
             </div>
+          </div>
         </div>
-        <div class="container">
-            <div class="contact" id="contact">
-                <h1>You can find me at...</h1>
-                <contact>
-                    <a href="https://github.com/YogishaNiraula" class="p-4 hover:text-teal-400">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="#" class="p-4 hover:text-teal-400">
-                        <i class="fa fa-envelope"></i>
-                    </a>
-                    <a href="https://www.facebook.com/yogisha.niraula" class="p-4 hover:text-teal-400">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </contact>
+        <div class="about" id="about">
+          <section>
+            <topic>About</topic>
+            <div class="container about-cont">
+              <div class="text-2xl p-12 shadow-inner">
+                Self-taught, highly motivated developer looking to build a
+                career in web development. A knack for teamwork and working with
+                people across agency capabilities. Profound respect for and
+                admiration of the culture, process and craft of web development.
+                Understanding of what it takes to form long-term client
+                relationships.
+              </div>
             </div>
+          </section>
         </div>
-        <footer class="text-center w-full p-3">Designed by Daisy19.</footer>
+        <div class="skill" id="skill">
+          <topic>Skill</topic>
+          <span class="skill-info"
+            >Adept in handling following tools and languages.</span
+          >
+          <div class="skill-names">
+            <span class="text-wrapper column">
+              <ul class="columns is-multiline p-6">
+                <li class="letters column is-half">html</li>
+                <li class="letters column is-half">css</li>
+                <li class="letters column is-half">python</li>
+                <li class="letters column is-half">Vue</li>
+                <li class="letters column is-half">javascript</li>
+                <li class="letters column is-half">Git</li>
+              </ul>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="work" id="work">
+        <topic>Work</topic>
+        <div class="columns is-multiline">
+          <project>
+            <a href="https://parallax-eight.vercel.app/" target="_blank">
+              <img
+                slot="pic"
+                class="w-full"
+                src="https://i.imgur.com/6tSk3Kp.png"
+                alt=""
+              />
+              <p
+                slot="project-name"
+                class="text-xl h-10 hover:text-red-500 text-orange-200 text-center"
+              >
+                Parallax
+              </p>
+            </a>
+          </project>
+          <project>
+            <a
+              class="project-files"
+              href="https://woodland-landing.vercel.app/"
+              target="_blank"
+            >
+              <img
+                slot="pic"
+                class="w-full"
+                src="https://i.imgur.com/IsmnnCF.jpg"
+                alt=""
+              />
+              <p
+                slot="project-name"
+                class="text-xl h-10 hover:text-red-500 text-orange-200 text-center"
+              >
+                Landing page
+              </p>
+            </a>
+          </project>
+          <project>
+            <a
+              class="project-files"
+              href="https://product-survey.vercel.app/"
+              target="_blank"
+            >
+              <img
+                slot="pic"
+                class="w-full"
+                src="https://i.imgur.com/OA7xQUe.png"
+                alt=""
+              />
+              <p
+                slot="project-name"
+                class="text-xl h-10 hover:text-red-500 text-orange-200 text-center"
+              >
+                Survey
+              </p>
+            </a>
+          </project>
+        </div>
+      </div>
+      <div class="container">
+        <div class="contact" id="contact">
+          <h1>You can find me at...</h1>
+          <contact>
+            <a
+              href="https://github.com/YogishaNiraula"
+              class="p-4 hover:text-teal-400"
+            >
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="#" class="p-4 hover:text-teal-400">
+              <i class="fa fa-envelope"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/yogisha.niraula"
+              class="p-4 hover:text-teal-400"
+            >
+              <i class="fa fa-facebook"></i>
+            </a>
+          </contact>
+        </div>
+      </div>
+      <footer class="text-center w-full p-3">Designed by Daisy19.</footer>
     </div>
-</body>
-<script src="skill.js"></script>
-<script src="main.js"></script>
-
+  </body>
+  <script src="skill.js"></script>
+  <script src="main.js"></script>
 </html>

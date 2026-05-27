@@ -365,6 +365,71 @@
         background: var(--faint);
       }
 
+      /* ── PROJECTS ── */
+      .project-feature {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      .project-img-wrap {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border-light);
+        transition: var(--transition-theme);
+        line-height: 0;
+      }
+      .project-img-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .project-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: var(--text);
+        margin-bottom: 0.75rem;
+      }
+      .project-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+      }
+      .project-tag {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.75rem;
+        border-radius: 100px;
+        color: var(--copper);
+        background: var(--copper-faint);
+      }
+      .project-desc {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+      }
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--green);
+        text-decoration: none;
+        transition:
+          color 0.2s,
+          gap 0.2s;
+      }
+      .project-link:hover {
+        color: var(--green-bright);
+        gap: 0.65rem;
+      }
+
       /* ── SKILLS ── */
       .skills-grid {
         display: grid;
@@ -501,6 +566,10 @@
           flex-direction: column;
           align-items: flex-start;
         }
+        .project-feature {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
         footer {
           padding: 1.5rem;
         }
@@ -527,9 +596,12 @@
   <body>
     <a href="#experience" class="skip-link">Skip to content</a>
     <nav>
-      <a href="#" class="nav-logo" aria-label="Yogisha Niraula, top of page">Yogisha Niraula</a>
+      <a href="#" class="nav-logo" aria-label="Yogisha Niraula, top of page"
+        >Yogisha Niraula</a
+      >
       <ul class="nav-links">
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -557,10 +629,10 @@
           <strong>5+ years</strong> building scalable frontend systems with
           React, Next.js, and TypeScript. Experienced in reusable component
           architecture, performance optimization, and full-stack feature
-          delivery across Node.js and Ruby on Rails backends.
+          delivery across Node.js backend.
         </p>
         <div class="hero-ctas">
-          <a href="#experience" class="btn-primary">View Experience</a>
+          <a href="#projects" class="btn-primary">View My Work</a>
           <a href="#contact" class="btn-ghost">Get in Touch</a>
         </div>
       </div>
@@ -590,16 +662,6 @@
                   Built a Shopify-like multi-tenant theme platform with a visual
                   editor, reusable blocks, schema-driven templates, and live
                   preview capabilities.
-                </li>
-                <li>
-                  Integrated frontend systems with REST APIs using TypeScript +
-                  Zod validation, asynchronous data handling, and robust state
-                  synchronization.
-                </li>
-                <li>
-                  Improved React Native app performance and stability by
-                  resolving high-priority production issues and optimizing
-                  rendering behavior.
                 </li>
                 <li>
                   Contributed to a pnpm + Turborepo monorepo for multiple
@@ -652,6 +714,41 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section id="projects">
+      <div class="section-inner">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="project-feature reveal">
+          <div class="project-img-wrap">
+            <img
+              src="./images/pokepallete.png"
+              alt="PokéPalette — color palette generator interface showing Pokémon-themed color swatches"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-info">
+            <div class="project-name">PokéPalette</div>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">CSS</span>
+            </div>
+            <p class="project-desc">
+              A vibrant color palette generator for Pokémon-themed designs.
+              Generates cohesive color schemes from Pokémon sprite data with a
+              clean, playful interface.
+            </p>
+            <a
+              href="https://color-palette-generator-gray-six.vercel.app/"
+              target="_blank"
+              class="project-link"
+              >View Live &rarr;</a
+            >
           </div>
         </div>
       </div>
